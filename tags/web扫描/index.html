@@ -2,23 +2,19 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Hello World - Hexo</title>
+<title>标签: web扫描 - Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/passageshello-world/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/web扫描/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-02T16:04:17.497Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Hexo">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -93,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Hello World" height="28">
+                <img src="/images/logo.svg" alt="Hexo" height="28">
             
             </a>
         </div>
@@ -139,18 +135,29 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">web扫描</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-02T16:04:17.497Z">2019-07-03</time>
+                <time class="level-item has-text-grey" datetime="2019-07-04T12:40:38.000Z">2019-07-04</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 121 个字)
+                    1 分钟 读完 (大约 195 个字)
                 </span>
                 
                 
@@ -159,23 +166,31 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Hello World
+                <a class="has-link-black-ter" href="/passageslinux安装awvs及破解/">linux安装awvs及破解</a>
             
         </h1>
         <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="hljs-string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libxdamage1 libgtk-3-0 libasound2 libnss3 libxss1 libx11-xcb-dev -y</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="下载awvs"><a href="#下载awvs" class="headerlink" title="下载awvs"></a>下载awvs</h2><p>官网下载地址<a href="https://www.acunetix.com/web-vulnerability-scanner/demo/" target="_blank" rel="noopener">https://www.acunetix.com/web-vulnerability-scanner/demo/</a></p>
+<p>填好资料提交就可以下载了</p>
+<p>截至今天2019.7.4 我用的最新版本是12 v_190515149</p>
+<h2 id="安装awvs"><a href="#安装awvs" class="headerlink" title="安装awvs"></a>安装awvs</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 acunetix_trial.sh`</span><br><span class="line">sudo ./acunetix_trial.sh</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p><code>然后同意用户协议输入yes</code></p>
+<p>然后域名输入ip地址</p>
+<p>然后邮箱</p>
+<p>然后passwd</p>
+<h2 id="破解awvs"><a href="#破解awvs" class="headerlink" title="破解awvs"></a>破解awvs</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 777 patch_awvs</span><br><span class="line">sudo mv patch_awvs  </span><br><span class="line">/home/acunetix/.acunetix_trial/v_190515149/scanner/</span><br><span class="line">cd /home/acunetix/.acunetix_trial/v_190515149/scanner/</span><br><span class="line">sudo  ./patch_awvs</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p><code>破解成功会显示</code></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt; xs3c.co &gt;</span><br><span class="line"> ------------</span><br><span class="line">       \   ,__,</span><br><span class="line">        \  (oo)____</span><br><span class="line">           (__)    )\</span><br><span class="line">              ||--|| *</span><br><span class="line">Crack by bigchan.Tested on v_190325161.</span><br><span class="line">Usage: Copy me to the scanner folder and run as root.</span><br><span class="line"></span><br><span class="line">Check environment.</span><br><span class="line">Generating license.</span><br><span class="line">Patch executable.</span><br><span class="line">Jobs done, there you go.’</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="保护license不失效"><a href="#保护license不失效" class="headerlink" title="保护license不失效"></a>保护license不失效</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chattr +i /home/acunetix/.acunetix_trial/data/license/license_info.json</span><br></pre></td></tr></table></figure>
+
+<p>借鉴网友的教程整理出来的</p>
+<p>侵删</p>
+<p>2019.7.4 21.54</p>
 
         </div>
         
@@ -186,39 +201,7 @@
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
-</div>
 
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
-
-<div class="notification is-danger">
-    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-        </div>
-    </div>
-</div>
 
 
 
@@ -238,11 +221,11 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="1024">
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="jiaoao">
                     
                     
                     <p class="is-size-4 is-block">
-                        1024
+                        jiaoao
                     </p>
                     
                     
@@ -286,7 +269,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        1
                     </p>
                 </div>
             </div>
@@ -401,6 +384,15 @@
 </div>
     
         
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/web扫描/" style="font-size: 10px;">web扫描</a>
+    </div>
+</div>
+
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
@@ -414,16 +406,16 @@
         
         <article class="media">
             
-            <a href="/passageshello-world/" class="media-left">
+            <a href="/passageslinux安装awvs及破解/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="linux安装awvs及破解">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-02T16:04:17.497Z">2019-07-03</time></div>
-                    <a href="/passageshello-world/" class="has-link-black-ter is-size-6">Hello World</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-04T12:40:38.000Z">2019-07-04</time></div>
+                    <a href="/passageslinux安装awvs及破解/" class="has-link-black-ter is-size-6">linux安装awvs及破解</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -466,6 +458,13 @@
                 标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/web扫描/">
+                        <span class="tag">web扫描</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
             </div>
         </div>
@@ -492,16 +491,16 @@
         
         <article class="media">
             
-            <a href="/passageshello-world/" class="media-left">
+            <a href="/passageslinux安装awvs及破解/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="linux安装awvs及破解">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-02T16:04:17.497Z">2019-07-03</time></div>
-                    <a href="/passageshello-world/" class="has-link-black-ter is-size-6">Hello World</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-04T12:40:38.000Z">2019-07-04</time></div>
+                    <a href="/passageslinux安装awvs及破解/" class="has-link-black-ter is-size-6">linux安装awvs及破解</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -545,6 +544,13 @@
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/web扫描/">
+                        <span class="tag">web扫描</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -562,7 +568,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Hello World" height="28">
+                    <img src="/images/logo.svg" alt="Hexo" height="28">
                 
                 </a>
                 <p class="is-size-7">
