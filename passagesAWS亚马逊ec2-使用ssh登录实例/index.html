@@ -2,20 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>标签 - Ox400</title>
+<title>AWS亚马逊ec2 使用ssh登录实例 - Ox400</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="keywords" content="AWS,hexo,web扫描">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ox400">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+    <meta name="description" content="趁这几天赋闲把以前部署在typecho的博文迁移过来原博文同服务器过期一起销毁了还好在有道云里零零散散的有些记录 （备份的重要性） aws为了安全，也下了不少的功夫。比如说我们用ec2没有办法直接用ssh登录等等">
+<meta name="keywords" content="AWS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS亚马逊ec2 使用ssh登录实例">
+<meta property="og:url" content="http://yoursite.com/passagesAWS亚马逊ec2-使用ssh登录实例/index.html">
 <meta property="og:site_name" content="Ox400">
+<meta property="og:description" content="趁这几天赋闲把以前部署在typecho的博文迁移过来原博文同服务器过期一起销毁了还好在有道云里零零散散的有些记录 （备份的重要性） aws为了安全，也下了不少的功夫。比如说我们用ec2没有办法直接用ssh登录等等">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-07-06T07:06:57.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ox400">
+<meta name="twitter:title" content="AWS亚马逊ec2 使用ssh登录实例">
+<meta name="twitter:description" content="趁这几天赋闲把以前部署在typecho的博文迁移过来原博文同服务器过期一起销毁了还好在有道云里零零散散的有些记录 （备份的重要性） aws为了安全，也下了不少的功夫。比如说我们用ec2没有办法直接用ssh登录等等">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -90,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Ox400" height="28">
+                <img src="/images/logo.svg" alt="AWS亚马逊ec2 使用ssh登录实例" height="28">
             
             </a>
         </div>
@@ -104,7 +108,7 @@
                 
                 <a class="navbar-item" href="/categories">类别</a>
                 
-                <a class="navbar-item is-active" href="/tags">标签</a>
+                <a class="navbar-item" href="/tags">标签</a>
                 
                 <a class="navbar-item" href="/about">关于</a>
                 
@@ -135,39 +139,139 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-06T06:52:21.000Z">2019-07-06</time>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/AWS/">
-                        <span class="tag">AWS</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/hexo/">
-                        <span class="tag">hexo</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 235 个字)
+                </span>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/web扫描/">
-                        <span class="tag">web扫描</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
                 
             </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                AWS亚马逊ec2 使用ssh登录实例
+            
+        </h1>
+        <div class="content">
+            <p>趁这几天赋闲把以前部署在typecho的博文迁移过来原博文同服务器过期一起销毁了还好在有道云里零零散散的有些记录 （备份的重要性）</p>
+<p>aws为了安全，也下了不少的功夫。比如说我们用ec2没有办法直接用ssh登录等等<br><img src="/images/ec2.jpg" alt="ec2"></p>
+<a id="more"></a>
+
+<p>为了更方便的使用ec2实力接下来，我们修改一下策略使用ssh登录以及使用root用户上线</p>
+<ul>
+<li><p>1 我们首先要重置root密码，输入命令</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2 接下来切换到root帐号 重置一下普通用户密码</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo -i </span><br><span class="line">passwd username</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3 更改一下sshd_config 重启ssh服务就可以使用ssh登录ec2 了</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sed -ri &apos;s/^#?(PasswordAuthentication)\s+(yes|no)/\1 yes/&apos; /etc/ssh/sshd_config</span><br><span class="line">sed -ri &apos;s/^#?(PermitRootLogin)\s+(yes|no)/\1 yes/&apos; /etc/ssh/sshd_config</span><br><span class="line">sed -ri &apos;s/^/#/;s/sleep 10&quot;\s+/&amp;\n/&apos; /root/.ssh/authorized_keys</span><br><span class="line">service sshd restart</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>完</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/AWS/">AWS</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=https%3A%2F%2Fqr.alipay.com%2Ffkx00381pgkkpoacxqj7313&amp;output=image%2Fpng&amp;error=L&amp;type=0&amp;margin=0&amp;size=4" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=wxp%3A%2F%2Ff2f03Us4DhfijZe-PhRgOHV3yfhgKzlaz6d-&amp;output=image%2Fjpeg&amp;error=L&amp;type=0&amp;margin=0&amp;size=4&amp;1562314189430" alt="微信"></div>
+</a>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<a class="button is-warning donate" onclick="document.getElementById(&#39;paypal-donate-form&#39;).submit()">
+    <span class="icon is-small">
+        <i class="fab fa-paypal"></i>
+    </span>
+    <span>Paypal</span>
+</a>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-donate-form">
+    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="business" value="2211921910@qq.com">
+    <input type="hidden" name="currency_code" value="USD">
+</form>
+
+                
+                
+<a class="button is-danger donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9LTEPDCWXM8RW&amp;source=url" target="_blank">
+    <span class="icon is-small">
+        <i class="fab fa-patreon"></i>
+    </span>
+    <span>Patreon</span>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/passageshexo进阶/">
+                <span class="level-item">hexo进阶</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 
@@ -633,7 +737,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Ox400" height="28">
+                    <img src="/images/logo.svg" alt="AWS亚马逊ec2 使用ssh登录实例" height="28">
                 
                 </a>
                 <p class="is-size-7">
