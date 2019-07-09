@@ -2,24 +2,19 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Wi-Fi_deauther - Ox400</title>
+<title>标签: 硬件hack - Ox400</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="基于esp8266WiFi开发板打造一个wifi Doos工具">
-<meta name="keywords" content="loT,esp8266">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Wi-Fi_deauther">
-<meta property="og:url" content="http://yoursite.com/passagesWi-Fi-deauther/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Ox400">
+<meta property="og:url" content="http://yoursite.com/tags/硬件hack/index.html">
 <meta property="og:site_name" content="Ox400">
-<meta property="og:description" content="基于esp8266WiFi开发板打造一个wifi Doos工具">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-07T09:29:11.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wi-Fi_deauther">
-<meta name="twitter:description" content="基于esp8266WiFi开发板打造一个wifi Doos工具">
+<meta name="twitter:title" content="Ox400">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -94,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Wi-Fi_deauther" height="28">
+                <img src="/images/logo.svg" alt="Ox400" height="28">
             
             </a>
         </div>
@@ -140,18 +135,29 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">硬件hack</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-07T09:02:40.000Z">2019-07-07</time>
+                <time class="level-item has-text-grey" datetime="2019-07-09T14:57:28.000Z">2019-07-09</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 468 个字)
+                    6 分钟 读完 (大约 903 个字)
                 </span>
                 
                 
@@ -160,144 +166,31 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Wi-Fi_deauther
+                <a class="has-link-black-ter" href="/passagesBadusb-硬件黑客的大杀器/">Badusb 硬件黑客的大杀器</a>
             
         </h1>
         <div class="content">
-            <h3 id="基于esp8266WiFi开发板打造一个wifi-Doos工具"><a href="#基于esp8266WiFi开发板打造一个wifi-Doos工具" class="headerlink" title="基于esp8266WiFi开发板打造一个wifi Doos工具"></a>基于esp8266WiFi开发板打造一个wifi Doos工具</h3><p><img src="/images/8266.jpg" alt="wifiDDos"></p>
-<a id="more"></a>
-<p>先是懒得下床关灯买了一个esp8266开发板想把宿舍的灯变成loT 后来发现更麻烦关灯还要切换wifi（其实就是难到我了）然后偶然看到关于用esp8266做一个Wi-Fi_deauther资料。。。。</p>
-<ul>
-<li><p>材料</p>
-<p>esp8266开发板一个（淘宝大约20rmb左右）</p>
-<p>NodeMCU Flasher烧录工具（<a href="/download/烧录软件.rar">点击下载</a>）</p>
-<p>Wi-Fi_deauther固件（<a href="/download/wifikiller.bin">点击下载</a>）</p>
-</li>
-<li><p>制作</p>
-<p>将烧写工具解压并打开<br><img src="/images/flashe.jpg" alt="flashe"></p>
-<p>选好端口和烧录文件点击flash</p>
-<p>完成后按RST重启就好了</p>
-</li>
-<li><p>使用</p>
-<p>打开wifi链接到esp8266释放的wifi </p>
-<p>SSID:pwned </p>
-<p>PASSWORD:deauther</p>
-<p>进入192.168.4.1 web控制台</p>
-<p><img src="/images/web.jpg" alt="esp8266web"></p>
-<p>选择ap进行攻击</p>
-<h4 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h4></li>
-<li><p>原理</p>
-<p>802.11 WiFi 协议包含了一个 Deauthentication（解除身份验证）特性，其作用就是为了将用户从网络中分离。攻击者可随时使用无线 AP 的伪造源地址，向发射站发送一个 Deauthentication 攻击数据包。</p>
-<p>该协议不需要对 Deauthentication 攻击框架进行加密，甚至是建立会话。该漏洞在 802.11w-2009 中有提议解决，但几乎所有厂商在默认情况下都将其设置为禁用状态。</p>
-<p>通俗点说就是这个设备能让你已连接的设备掉线（断开连接）然后也连不上 Wi-Fi，类似于 DOS 攻击。</p>
-</li>
-<li><p>更多GitHub项目</p>
-<p>关于Wi-Fi_deauther有很多开源项目这里我收集了部分</p>
-<p><a href="https://github.com/spacehuhn/esp8266_deauther" target="_blank" rel="noopener">https://github.com/spacehuhn/esp8266_deauther</a></p>
-<p><a href="https://github.com/Anuarul/esp8266_deauther-master" target="_blank" rel="noopener">https://github.com/Anuarul/esp8266_deauther-master</a></p>
-</li>
-<li><p>关于esp8266 </p>
-<p>乐鑫esp8266是一个低功耗高集成度的wifi soc</p>
-<p>有很多集成esp8266的开发板可用于lot项目</p>
-</li>
-<li><p>日常听歌吧</p>
-</li>
-</ul>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29719651&auto=1&height=66"></iframe>
-
+            <p><img src="/images/badusb.jpg" alt="badusb"><br>和大多数人一样，最初见到BadUSB是在美剧《黑客军团》中，是fsociety组织常用的工具之一，无论是向服务器下载木马控制被害者主机，还是达琳在停车场帅气的扔出大量USB钓鱼，BadUSB都是功不可没的物理武器之一。</p>
         </div>
         
-        <div class="level is-size-7 is-uppercase">
+        
+        <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/esp8266/">esp8266</a>, <a class="has-link-grey -link" href="/tags/loT/">loT</a>
+                <a class="button is-size-7 is-light" href="/passagesBadusb-硬件黑客的大杀器/#more">阅读更多</a>
                 </div>
             </div>
         </div>
         
         
-        
     </div>
 </div>
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=https%3A%2F%2Fqr.alipay.com%2Ffkx00381pgkkpoacxqj7313&amp;output=image%2Fpng&amp;error=L&amp;type=0&amp;margin=0&amp;size=4" alt="支付宝"></div>
-</a>
-
-                
-                
-<a class="button is-success donate">
-    <span class="icon is-small">
-        <i class="fab fa-weixin"></i>
-    </span>
-    <span>微信</span>
-    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=wxp%3A%2F%2Ff2f03Us4DhfijZe-PhRgOHV3yfhgKzlaz6d-&amp;output=image%2Fjpeg&amp;error=L&amp;type=0&amp;margin=0&amp;size=4&amp;1562314189430" alt="微信"></div>
-</a>
-
-                
-                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
-
-<a class="button is-warning donate" onclick="document.getElementById(&#39;paypal-donate-form&#39;).submit()">
-    <span class="icon is-small">
-        <i class="fab fa-paypal"></i>
-    </span>
-    <span>Paypal</span>
-</a>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-donate-form">
-    <input type="hidden" name="cmd" value="_donations">
-    <input type="hidden" name="business" value="2211921910@qq.com">
-    <input type="hidden" name="currency_code" value="USD">
-</form>
-
-                
-                
-<a class="button is-danger donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9LTEPDCWXM8RW&amp;source=url" target="_blank">
-    <span class="icon is-small">
-        <i class="fab fa-patreon"></i>
-    </span>
-    <span>Patreon</span>
-</a>
-
-                
-        </div>
-    </div>
-</div>
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/passages5G浅谈/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">5G浅谈</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/passagesAWS亚马逊ec2-使用ssh登录实例/">
-                <span class="level-item">AWS亚马逊ec2 使用ssh登录实例</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
 
 
 </div>
@@ -912,7 +805,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Wi-Fi_deauther" height="28">
+                    <img src="/images/logo.svg" alt="Ox400" height="28">
                 
                 </a>
                 <p class="is-size-7">
