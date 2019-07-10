@@ -2,19 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>标签: AWS - Ox400</title>
+<title>Termux打造Android端渗透测试工具集 - Ox400</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Ox400">
-<meta property="og:url" content="http://yoursite.com/tags/AWS/index.html">
+    <meta name="description" content="简介Termux是Android的终端模拟器。它与其他终端仿真器的主要区别在于它自己的软件包存储库以及大量的各种实用程序。终端模拟器是一个为shell提供基于文本的界面的程序">
+<meta name="keywords" content="Termux,渗透测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Termux打造Android端渗透测试工具集">
+<meta property="og:url" content="http://yoursite.com/passagesTermux打造Android端渗透测试工具集/index.html">
 <meta property="og:site_name" content="Ox400">
+<meta property="og:description" content="简介Termux是Android的终端模拟器。它与其他终端仿真器的主要区别在于它自己的软件包存储库以及大量的各种实用程序。终端模拟器是一个为shell提供基于文本的界面的程序">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-07-10T13:02:49.716Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ox400">
+<meta name="twitter:title" content="Termux打造Android端渗透测试工具集">
+<meta name="twitter:description" content="简介Termux是Android的终端模拟器。它与其他终端仿真器的主要区别在于它自己的软件包存储库以及大量的各种实用程序。终端模拟器是一个为shell提供基于文本的界面的程序">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -89,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Ox400" height="28">
+                <img src="/images/logo.svg" alt="Termux打造Android端渗透测试工具集" height="28">
             
             </a>
         </div>
@@ -135,29 +140,18 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">AWS</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-06T06:52:21.000Z">2019-07-06</time>
+                <time class="level-item has-text-grey" datetime="2019-07-10T12:44:45.000Z">2019-07-10</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 235 个字)
+                    6 分钟 读完 (大约 947 个字)
                 </span>
                 
                 
@@ -166,22 +160,40 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/passagesAWS亚马逊ec2-使用ssh登录实例/">AWS亚马逊ec2 使用ssh登录实例</a>
+                Termux打造Android端渗透测试工具集
             
         </h1>
         <div class="content">
-            <p>趁这几天赋闲把以前部署在typecho的博文迁移过来原博文同服务器过期一起销毁了还好在有道云里零零散散的有些记录 （备份的重要性）</p>
-<p>aws为了安全，也下了不少的功夫。比如说我们用ec2没有办法直接用ssh登录等等<br><img src="/images/ec2.jpg" alt="ec2"></p>
+            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><img src="/images/Termux1.jpg" alt="Termux"><br>Termux是Android的终端模拟器。它与其他终端仿真器的主要区别在于它自己的软件包存储库以及大量的各种实用程序。<br>终端模拟器是一个为shell提供基于文本的界面的程序<a id="more"></a><br>Android本来就是一个linux内核的终端操作系统linux终端运行起来更加得心应手<br>Termux仅适用于Android 5.0或更高版本。</p>
+<ul>
+<li><p><a href="https://termux.com/" target="_blank" rel="noopener">Termux官网</a></p>
+</li>
+<li><p><a href="https://github.com/termux/termux-app" target="_blank" rel="noopener">github地址</a></p>
+</li>
+<li><p><a href="https://www.coolapk.com/apk/com.termux" target="_blank" rel="noopener">酷安下载地址</a></p>
+</li>
+<li><p>Termux是单用户<br>Android应用程序是沙盒，并拥有自己的Linux用户ID和SELinux标签。Termux不是例外，Termux中的所有内容都以与应用程序本身相同的用户ID执行。</p>
+</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>打开Termux初始化等一会就可以了<br><img src="/images/Termux2.jpg" alt="Termux"><br>常用快捷键<br>Ctrl键是终端用户常用的按键 - 但大多数触摸键盘都没有这个按键。为此，Termux使用音量减小按钮来模拟Ctrl键。<br>例如，在触摸键盘上按音量减小+ L发送与在硬件键盘上按Ctrl + L相同的输入。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+A -&gt; 将光标移动到行首</span><br><span class="line">Ctrl+C -&gt; 中止当前进程</span><br><span class="line">Ctrl+D -&gt; 注销终端会话</span><br><span class="line">Ctrl+E -&gt; 将光标移动到行尾</span><br><span class="line">Ctrl+K -&gt; 从光标删除到行尾</span><br><span class="line">Ctrl+L -&gt; 清除终端</span><br><span class="line">Ctrl+Z -&gt; 挂起（发送SIGTSTP到）当前进程</span><br><span class="line">音量加键也可以作为产生特定输入的特殊键.</span><br><span class="line"></span><br><span class="line">音量加+E -&gt; Esc键</span><br><span class="line">音量加+T -&gt; Tab键</span><br><span class="line">音量加+1 -&gt; F1（和音量增加+ 2→F2等）</span><br><span class="line">音量加+0 -&gt; F10</span><br><span class="line">音量加+B -&gt; Alt + B，使用readline时返回一个单词</span><br><span class="line">音量加+F -&gt; Alt + F，使用readline时转发一个单词</span><br><span class="line">音量加+X -&gt; Alt+X</span><br><span class="line">音量加+W -&gt; 向上箭头键</span><br><span class="line">音量加+A -&gt; 向左箭头键</span><br><span class="line">音量加+S -&gt; 向下箭头键</span><br><span class="line">音量加+D -&gt; 向右箭头键</span><br><span class="line">音量加+L -&gt; | （管道字符）</span><br><span class="line">音量加+H -&gt; 〜（波浪号字符）</span><br><span class="line">音量加+U -&gt; _ (下划线字符)</span><br><span class="line">音量加+P -&gt; 上一页</span><br><span class="line">音量加+N -&gt; 下一页</span><br><span class="line">音量加+. -&gt; Ctrl + \（SIGQUIT）</span><br><span class="line">音量加+V -&gt; 显示音量控制</span><br><span class="line">音量加+Q -&gt; 显示额外的按键视图</span><br><span class="line">基本命令</span><br><span class="line">Termux除了支持apt命令外,还在此基础上封装了pkg命令,pkg命令向下兼容apt命令.apt命令大家应该都比较熟悉了,这里直接简单的介绍下pkg命令:</span><br><span class="line"></span><br><span class="line">pkg search &lt;query&gt;              搜索包</span><br><span class="line">pkg install &lt;package&gt;           安装包</span><br><span class="line">pkg uninstall &lt;package&gt;         卸载包</span><br><span class="line">pkg reinstall &lt;package&gt;         重新安装包</span><br><span class="line">pkg update                      更新源</span><br><span class="line">pkg upgrade                     升级软件包</span><br><span class="line">pkg list-all                    列出可供安装的所有包</span><br><span class="line">pkg list-installed              列出已经安装的包</span><br><span class="line">pkg shoe &lt;package&gt;              显示某个包的详细信息</span><br><span class="line">pkg files &lt;package&gt;             显示某个包的相关文件夹路径</span><br></pre></td></tr></table></figure>
+
+<p>快捷方式都巨难用如果有条件还是备一块键盘吧蓝牙otg都可以<br>然后安装常用的工具</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">nmap:pkg install nmap</span><br><span class="line">python:pkg install python  默认是python3</span><br><span class="line">python2：pkg insatll python2 安装python2</span><br><span class="line">sqlmap： pip install nmap 需要pythone-pip2的环境安装python2自带</span><br><span class="line">hydra：pkg install hydra  暴力破解工具</span><br><span class="line">然后重头好戏 我们喜闻乐见的msf了</span><br><span class="line">pkg install wget</span><br><span class="line">wget https://Auxilus.github.io/metasploit.sh</span><br><span class="line">bash metasploit.sh</span><br><span class="line">9012年Android终端只要支持并开通volte就会下发ipv6地址唯一的可以公网访问</span><br><span class="line">要是没有就是运营商的问题可以打运营商客服咨询</span><br><span class="line">那么你就拥有了一个ipv6公网msf</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/Termux3.jpg" alt="Termux"><br>如果嫌官方源太慢这里提供一个清华源<a href="http://mirrors.tuna.tsinghua.edu.cn/termux" target="_blank" rel="noopener">http://mirrors.tuna.tsinghua.edu.cn/termux</a><br>更改源 <code>apt edit-sources</code><br>本文不提供任何关于黑客攻击的操作</p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/passagesAWS亚马逊ec2-使用ssh登录实例/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Termux/">Termux</a>, <a class="has-link-grey -link" href="/tags/渗透测试/">渗透测试</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -189,9 +201,74 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=https%3A%2F%2Fqr.alipay.com%2Ffkx00381pgkkpoacxqj7313&amp;output=image%2Fpng&amp;error=L&amp;type=0&amp;margin=0&amp;size=4" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=wxp%3A%2F%2Ff2f03Us4DhfijZe-PhRgOHV3yfhgKzlaz6d-&amp;output=image%2Fjpeg&amp;error=L&amp;type=0&amp;margin=0&amp;size=4&amp;1562314189430" alt="微信"></div>
+</a>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<a class="button is-warning donate" onclick="document.getElementById(&#39;paypal-donate-form&#39;).submit()">
+    <span class="icon is-small">
+        <i class="fab fa-paypal"></i>
+    </span>
+    <span>Paypal</span>
+</a>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-donate-form">
+    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="business" value="2211921910@qq.com">
+    <input type="hidden" name="currency_code" value="USD">
+</form>
+
+                
+                
+<a class="button is-danger donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9LTEPDCWXM8RW&amp;source=url" target="_blank">
+    <span class="icon is-small">
+        <i class="fab fa-patreon"></i>
+    </span>
+    <span>Patreon</span>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/passagesBadusb-硬件黑客的大杀器/">
+                <span class="level-item">Badusb 硬件黑客的大杀器</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -834,7 +911,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Ox400" height="28">
+                    <img src="/images/logo.svg" alt="Termux打造Android端渗透测试工具集" height="28">
                 
                 </a>
                 <p class="is-size-7">
